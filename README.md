@@ -28,6 +28,6 @@ npm install @react-navigation/native
  ```
 yarn run web
  ```
-5. EXplore o aplicativo.
+5. Explore o aplicativo.
 
 
