@@ -1,8 +1,8 @@
 // screens/CreatePollScreen.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
-import { db } from '../firebaseConfig'; // Certifique-se de que o caminho está correto
-import { collection, addDoc } from 'firebase/firestore';
+import { db } from './farebaseConfig'; 
+import { collection, addDoc } from 'firebase/collection';
 
 export default function CreatePollScreen({ navigation }) {
   const [title, setTitle] = useState('');
@@ -22,12 +22,12 @@ export default function CreatePollScreen({ navigation }) {
       const docRef = await addDoc(collection(db, 'polls'), {
         title: title,
         options: [option1, option2],
-        votes: [0, 0], // Inicializa os votos com 0 para cada opção
+        votes: [0, 0], 
       });
 
       setLoading(false);
       Alert.alert('Sucesso', 'Enquete criada com sucesso!');
-      navigation.navigate('Enquetes'); // Navega para a tela de enquetes
+      navigation.navigate('Enquetes'); 
     } catch (error) {
       setLoading(false);
       Alert.alert('Erro', `Ocorreu um erro ao criar a enquete: ${error.message}`);

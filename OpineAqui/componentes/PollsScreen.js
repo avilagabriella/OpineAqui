@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, Button, StyleSheet, Alert } from 'react-native';
-import { firebase } from '../firebaseConfig'; 
+import { firebase } from './farebaseConfig'; 
 
 export default function PollsScreen() {
   const [polls, setPolls] = useState([]);

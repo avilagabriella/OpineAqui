@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Text, Alert } from 'react-native';
-import { firebase } from '../firebaseConfig';
+import { firebase } from './farebaseConfig';
 
 export default function CadastroScreen({ navigation }) {
   const [email, setEmail] = useState('');
